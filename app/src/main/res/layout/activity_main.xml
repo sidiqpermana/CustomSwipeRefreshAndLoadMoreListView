@@ -1,0 +1,13 @@
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/swipe_main">
+
+        <com.sidiq.codelab.customswiperefreshandloadmorelistview.LoadMoreListView
+            android:id="@+id/lv_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@android:color/transparent"></com.sidiq.codelab.customswiperefreshandloadmorelistview.LoadMoreListView>
+
+</android.support.v4.widget.SwipeRefreshLayout>
