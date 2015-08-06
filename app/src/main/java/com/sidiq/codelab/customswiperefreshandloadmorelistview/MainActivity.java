@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
 
     private void populateDefaultData(){
        String[] androidVersion = new String[]{
+               "Not Apple", "Not Blackberry",
                "Cupcake", "Donut",
                "Eclair", "Froyo", "Gingerbread",
                "Honeycomb", "Ice cream sandwich",
@@ -92,6 +93,7 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
         }
         adapter.notifyDataSetChanged();
         lvItem.onLoadMoreComplete();
+        lvItem.setSelection(list.size() - 11);
     }
 
     private class FakePullRefreshAsync extends AsyncTask<Void, Void, Void>{
@@ -118,6 +120,7 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
         }
         swipeMain.setRefreshing(false);
         adapter.notifyDataSetChanged();
+        lvItem.setSelection(0);
 
     }
 
