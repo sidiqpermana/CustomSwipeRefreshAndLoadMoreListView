@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
 
         populateDefaultData();
 
+        //listener untuk loadmore
         lvItem.setOnLoadMoreListener(new LoadMoreListView.OnLoadMoreListener() {
             @Override
             public void onLoadMore() {
@@ -68,6 +69,7 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
         new FakePullRefreshAsync().execute();
     }
 
+    //Background proses palsu untuk melakukan proses delay dan append data di bagian bawah list
     private class FakeLoadmoreAsync extends AsyncTask<Void, Void, Void>{
 
         @Override
@@ -96,6 +98,7 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
         lvItem.setSelection(list.size() - 11);
     }
 
+    //Background proses palsu untuk melakukan proses delay dan append data di bagian atas list
     private class FakePullRefreshAsync extends AsyncTask<Void, Void, Void>{
 
         @Override
